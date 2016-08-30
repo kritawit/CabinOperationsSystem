@@ -1,7 +1,8 @@
 package com.bangkokair.model;
 
 public enum AuthoritiesType {
-	USER("USER"), ADMIN("ADMIN"), DBA("DBA");
+
+	USER("USER"), SUPERUSER("SUPERUSER"), ADMIN("ADMIN"), SUPERADMIN("SUPERADMIN"), DBA("DBA");
 
 	String authoritiesType;
 

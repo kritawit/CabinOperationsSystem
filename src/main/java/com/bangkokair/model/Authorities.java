@@ -1,5 +1,6 @@
 package com.bangkokair.model;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -15,7 +16,9 @@ import javax.persistence.TemporalType;
 
 @Entity
 @Table(name = "AUTHORITIES")
-public class Authorities {
+public class Authorities implements Serializable {
+
+	private static final long serialVersionUID = 5531870637660626223L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

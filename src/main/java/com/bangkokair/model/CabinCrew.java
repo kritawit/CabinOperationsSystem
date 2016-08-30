@@ -35,59 +35,77 @@ public class CabinCrew implements Serializable {
 	@Column(name = "CCIDX", nullable = false)
 	private Integer ccidx;
 
+	@NotEmpty
 	@Column(name = "ID_EMP", nullable = false)
 	private Integer id_emp;
 
+	@NotEmpty
 	@Column(name = "ID_CARD", nullable = false, length = 13)
 	private Integer id_card;
 
-	@Column(name = "ID_PASSPROT")
-	private Integer id_passport;
+	@NotEmpty
+	@Column(name = "ID_PASSPROT", nullable = false)
+	private String id_passport;
 
+	@NotEmpty
 	@Column(name = "PASSPORT_EXP")
 	@Temporal(TemporalType.DATE)
 	private Date passport_exp;
 
+	@NotEmpty
 	@Column(name = "USERNAME", nullable = false, length = 45)
 	private String username;
 
+	@NotEmpty
 	@Column(name = "PASSWORD", nullable = false)
 	private String password;
 
+	@NotEmpty
 	@Column(name = "FIRSTNAME_EN", nullable = false, length = 45)
 	private String firstname_en;
 
+	@NotEmpty
 	@Column(name = "LASTNAME_EN", nullable = false, length = 45)
 	private String lastname_en;
 
+	@NotEmpty
 	@Column(name = "FIRSTNAME_TH", nullable = false, length = 45)
 	private String firstname_th;
 
+	@NotEmpty
 	@Column(name = "LASTNAME_TH", nullable = false, length = 45)
 	private String lastname_th;
 
+	@NotEmpty
 	@Column(name = "NICKNAME", nullable = false, length = 45)
 	private String nickname;
 
+	@NotEmpty
 	@Column(name = "TITLE", nullable = false, length = 45)
 	private String title;
 
+	@NotEmpty
 	@Column(name = "GENDER", nullable = false, length = 45)
 	private String gender;
 
+	@NotEmpty
 	@Column(name = "BIRTH_DATE", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date birth_date;
 
+	@NotEmpty
 	@Column(name = "NATIONALITY", nullable = false, length = 100)
 	private String nationality;
 
+	@NotEmpty
 	@Column(name = "RACE", nullable = false, length = 100)
 	private String race;
 
+	@NotEmpty
 	@Column(name = "RELIGION", nullable = false, length = 100)
 	private String religion;
 
+	@NotEmpty
 	@Column(name = "POSITION1")
 	private Integer position1;
 
@@ -97,43 +115,54 @@ public class CabinCrew implements Serializable {
 	@Column(name = "POSITION3")
 	private Integer position3;
 
+	@NotEmpty
 	@Column(name = "BATCH_NUM", nullable = false)
 	private Integer batch_num;
 
+	@NotEmpty
 	@Column(name = "BATCH_YEAR", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date batch_year;
 
+	@NotEmpty
 	@Column(name = "BANK_ID")
 	private Integer bank_id;
 
+	@NotEmpty
 	@Column(name = "EMAIL", length = 45)
 	private String email;
 
+	@NotEmpty
 	@Column(name = "TEL", length = 45)
 	private String tel;
 
 	@Column(name = "FAX", length = 45)
 	private String fax;
 
+	@NotEmpty
 	@Column(name = "MOBILE1", length = 45)
 	private String mobile1;
 
 	@Column(name = "MOBILE2", length = 45)
 	private String mobile2;
 
+	@NotEmpty
 	@Column(name = "ADDRESS", nullable = false)
 	private String address;
 
+	@NotEmpty
 	@Column(name = "CITY", nullable = false, length = 45)
 	private String city;
 
+	@NotEmpty
 	@Column(name = "COUNTRY", nullable = false, length = 45)
 	private String country;
 
+	@NotEmpty
 	@Column(name = "ZIPCODE", nullable = false, length = 10)
 	private String zipcode;
 
+	@NotEmpty
 	@Column(name = "JOIN_DATE", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private Date join_date;
@@ -192,11 +221,11 @@ public class CabinCrew implements Serializable {
 		this.id_card = id_card;
 	}
 
-	public Integer getId_passport() {
+	public String getId_passport() {
 		return id_passport;
 	}
 
-	public void setId_passport(Integer id_passport) {
+	public void setId_passport(String id_passport) {
 		this.id_passport = id_passport;
 	}
 
